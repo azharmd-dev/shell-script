@@ -1,10 +1,10 @@
 #!/bin/bash
 
 USERID=$(id -u)
-RD="\e[31m"
-GN="\e[32m"
-YW="\e[33m"
-NC="\e[0m"
+RD="\e[31m" #RED Color
+GN="\e[32m" #GREEN Color
+YW="\e[33m" #YELLOW Color
+NC="\e[0m"  #NO Color
 
 if [ $USERID -ne 0 ]; then
     echo "The user required root privilege access to run the script"
