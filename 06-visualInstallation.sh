@@ -12,7 +12,7 @@ if [ $USERID -ne 0 ]; then
 fi
 
 VALIDATE(){
-    if [ $1-ne 0 ]; then
+    if [ $1 -ne 0 ]; then
         echo -e "ERROR >> Installation of the application $2 is $RD FAILURE $NC"
         exit 1
     else
