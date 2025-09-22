@@ -10,8 +10,8 @@ fi
 dnf install nginx -y 
 
 if [ $? -ne 0 ]; then
-    echo "Installation of nginx is failure due to it already exist"
+    echo "Installation of nginx is <<failure>> due to it already exist"
     exit 1
 else 
-    echo "Installation of nginx is success"
+    echo "Installation of nginx is <<success>>"
 fi
