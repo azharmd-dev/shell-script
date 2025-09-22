@@ -20,7 +20,7 @@ VALIDATE(){
     fi
 }
 
-dnf list installed nginx #To checl nginx is installed or not
+dnf list installed nginx #To check nginx is installed or not
 if [ $? -ne 0 ]; then
     dnf install nginx -y
     VALIDATE $? "NGINX"
@@ -28,7 +28,7 @@ else
     echo -e "The NGINX already installed so $YW SKIPPING $NC the installation"
 fi
 
-dnf list installed python3 #To checl nginx is installed or not
+dnf list installed python3 #To check Python is installed or not
 if [ $? -ne 0 ]; then
     dnf install python3 -y
     VALIDATE $? "python3"
@@ -36,7 +36,7 @@ else
     echo -e "The PYTHON already installed so $YW SKIPPING $NC the installation"
 fi
 
-dnf list installed mysql #To checl nginx is installed or not
+dnf list installed mysql #To check MYSQL is installed or not
 if [ $? -ne 0 ]; then
     dnf install mysql -y
     VALIDATE $? "MYSQL"
