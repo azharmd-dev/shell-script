@@ -17,7 +17,9 @@ VALIDATE(){
         exit 1
     else
         echo -e "Installtion of the application $2 is $GN SUCCESS $NC"  
+    fi
 }
+
 dnf list installed nginx #To checl nginx is installed or not
 if [ $? -ne 0 ]; then
     dnf install nginx -y
