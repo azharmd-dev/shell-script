@@ -3,8 +3,15 @@
 USERID=$(id -u)
 
 if [ $USERID -ne 0 ]; then
-    echo "ERROR :: User requried root previleg access to run the commond"
+    echo "ERROR :: User requried root privilege access to run the commond"
     exit 1
-else
-    echo "User has previlage access"
+fi
+
+dnf install nginx -y 
+
+if [ $? -ne 0 ]; then
+    echo "Installation of nginx is failure due to it already exist"
+    exit 1
+else 
+    echo "Installation of nginx is success"
 fi
