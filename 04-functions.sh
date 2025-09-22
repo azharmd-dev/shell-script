@@ -21,3 +21,6 @@ dnf install nginx -y
 
 dnf install mysql -y
     VALIDATE $? "MYSQL"
+
+dnf install nodejs -y
+    VALIDATE $? "NodeJs"
