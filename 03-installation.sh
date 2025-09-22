@@ -7,10 +7,10 @@ if [ $USERID -ne 0 ]; then
     exit 1
 fi
 
-dnf install ngiinx -y 
+dnf install nginx -y 
 
 if [ $? -ne 0 ]; then
-    echo "Installation of nginx is <<failure>> due to it already exist"
+    echo "Installation of nginx is <<failure>>"
     exit 1
 else 
     echo "Installation of nginx is <<success>>"
