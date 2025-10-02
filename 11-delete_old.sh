@@ -27,4 +27,4 @@ do
     echo "Deleting the file: $filepath"
     rm -rf $filepath
     echo "Deleted the file: $filepath"
-done <<< File_to_delete
+done <<< $File_to_delete
