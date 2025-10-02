@@ -16,7 +16,7 @@ echo "Script execution is started ::: $(date)" | tee -a $Log_File
 Source_Dir=/home/ec2-user/app-logs
 
 if [ ! -d $Source_Dir ]; then
-    echo -e "$Source_Dir does not exit"
+    echo -e "$R $Source_Dir $N does not exit"
     exit 1
 fi
 
