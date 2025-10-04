@@ -2,8 +2,8 @@
 
 CPU_Usage=$(top -bn1 | grep "Cpu(s)")
 CPU_Threshold=80
-IP_ADDRESS=$(curl -s http://169.254.169.254/latest/meta-data/local-ipv4)
-MESSAGE=""
+IP_Address=$(curl -s http://169.254.169.254/latest/meta-data/local-ipv4)
+Message=""
 
 while IFS= read -r line
 do
@@ -15,6 +15,6 @@ if [ $Usage -ge $CPU_Threshold ]; then
     fi
 done <<< $CPU_Usage
 
-echo -e "Message Body: $Message"
+echo  "Message Body: $Message"
 
 sh cpumail.sh "pkpk34366@gmail.com" "High CPU Usage Alert" "High CPU Usage" "$Message" "$IP_Address" "DevOps Team"
