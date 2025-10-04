@@ -1,7 +1,7 @@
 #!/bin/bash
 
 Disk_Usage=$(df -hT | grep -v Filesystem)
-Disk_Threshold=2 #Usually in project it is more(75)
+Disk_Threshold=0 #Usually in project it is more(75)
 IP_Address=$(curl -s http://169.254.169.254/latest/meta-data/public-ipv4)
 Message=""
 
@@ -14,7 +14,7 @@ do
         fi
 done <<< $Disk_Usage
 
-echo -e "Message Body: $Message"
+echo "Message Body: $Message"
 
 sh mail.sh "pkpk34366@gmail.com" "High Disk Usage Alert" "High Disk Usage" "$Message" "$IP_Address" "DevOps Team"
 
