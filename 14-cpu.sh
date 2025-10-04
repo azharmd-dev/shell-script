@@ -14,3 +14,5 @@ if [ $Usage -ge $CPU_Threshold ]; then
         Message+="High CPU usage of: $USAGE % <br>" # escaping
     fi
 done <<< $CPU_Usage
+
+echo -e "Message Body: $Message"
