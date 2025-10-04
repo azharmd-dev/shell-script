@@ -8,7 +8,7 @@ MESSAGE=""
 while IFS= read -r line
 do
 
-Usage=$(echo $line | awk '{print $8}' | cut -d "." f1)
+Usage=$(echo $line | awk '{print $8}' | cut -d "." -f1)
 
 if [ $Usage -ge $CPU_Threshold ]; then
         Message+="High CPU usage of: $USAGE % <br>" # escaping
