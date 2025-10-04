@@ -11,7 +11,7 @@ Final_Body=$(sed -e "s/TO_TEAM/$To_Team/g" -e "s/ALERT_TYPE/$Alert_Type/g" -e "s
 
 {
 echo "To: $To_Address"
-echo "Subject: $Subjet"
+echo "Subject: $Subject"
 echo "Content-Type: text/html"
 echo ""
 echo "$Final_Body"
