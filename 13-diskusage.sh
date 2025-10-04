@@ -1,7 +1,7 @@
 #!/bin/bash
 
 Disk_Usage=$(df -hT | grep -v Filesystem)
-Disk_Threshold=1 #Usually in project it is more(75)
+Disk_Threshold=0 #Usually in project it is more(75)
 IP_Address=$(curl -s http://169.254.169.254/latest/meta-data/public-ipv4)
 Message=""
 
