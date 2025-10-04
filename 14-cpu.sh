@@ -16,3 +16,5 @@ if [ $Usage -ge $CPU_Threshold ]; then
 done <<< $CPU_Usage
 
 echo -e "Message Body: $Message"
+
+sh cpumail.sh "pkpk34366@gmail.com" "High CPU Usage Alert" "High CPU Usage" "$Message" "$IP_Address" "DevOps Team"
