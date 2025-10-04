@@ -13,11 +13,11 @@ do
             Messsage+="High Disk Usage on $Partition :: $Usage % <br>" #"+" it will append the previous message
         fi
 done <<< $Disk_Usage
-if [ -n "$Message" ]; then
+#if [ -n "$Message" ]; then
     echo "Message Body: $Message"
     sh mail.sh "pkpk34366@gmail.com" "High Disk Usage Alert" "High Disk Usage" "$Message" "$IP_Address" "DevOps Team"
-else
-    echo "No partitions crossed threshold."
-fi
+#else
+  #  echo "No partitions crossed threshold."
+#fi
 
 
