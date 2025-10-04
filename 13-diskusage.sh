@@ -14,6 +14,8 @@ do
         fi
 done <<< $Disk_Usage
 
+echo -e "Message Body: $Message"
+
 sh mail.sh "pkpk34366@gmail.com" "High Disk Usage Alert" "High Disk Usage" "$Message" "$IP_Address" "DevOps Team"
 
 
