@@ -7,7 +7,7 @@ Formatted_Body=$(printf '%s\n' "$Message_Body" | sed -e 's/[]\/$*.^[]/\\&/g')
 IP_Address=$5
 To_Team=$6
 
-Final_Body=$(sed -e "s/TO_TEAM/$To_Team/g" -e "s/ALERT_TYPE/$Alert_Type/g" -e "s/IP_ADDRESS/$IP_Address/g" -e "s/MESSAGE/$Formatted_Body/g" template.html)
+Final_Body=$(sed -e "s/TO_TEAM/$To_Team/g" -e "s/ALERT_TYPE/$Alert_Type/g" -e "s/IP_ADDRESS/$IP_Address/g" -e "s/Message/$Formatted_Body/g" template.html)
 
 {
 echo "To: $To_Address"
