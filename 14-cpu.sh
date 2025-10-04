@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CPU_Usage=$(top | grep id,)
+CPU_Usage=$(top -bn1 | grep id,)
 CPU_Threshold=98
 IP_ADDRESS=$(curl -s http://169.254.169.254/latest/meta-data/local-ipv4)
 MESSAGE=""
