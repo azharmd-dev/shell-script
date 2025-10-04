@@ -9,10 +9,10 @@ while IFS= read -r line
 do
 
 Idle_Usage=$(echo $line | awk '{print $8}' | cut -d "." -f1)
-Usage=$((100 - $Idle_Usage))
+Usage=$(echo "100 - $Idle_Usage")
 
 if [ $Usage -ge $CPU_Threshold ]; then
-        Message+="High CPU usage of: $Usage % <br>" # escaping
+        Message+="High CPU usage of: $Usage % <br>"
     fi
 done <<< $CPU_Usage
 
